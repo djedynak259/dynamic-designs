@@ -40,6 +40,18 @@ li {
 	margin: 0;
 	padding: 0;
 	background-color: lightblue;
+	animation-duration: 0s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes navFlexLeft {
+    from {justify-content: flex-end;}
+    to {justify-content: flex-start;}
+}
+
+@keyframes navFlexRight {
+    from {justify-content: flex-start;}
+    to {justify-content: flex-end;}
 }
 
 .navButtonList li:hover {
