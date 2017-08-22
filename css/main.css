@@ -1,0 +1,60 @@
+body{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+	display: inline-block;
+	color: black;
+	/*make a link not follow*/
+}
+
+button {
+	padding: 10px;
+	border: none;
+	background-color: inherit;
+	outline: none;
+}
+
+li {
+	list-style: none;
+	display: block;
+}
+
+.dropDown {
+	position: absolute;
+	display: none;
+	padding: 0;
+	width: 100px;
+	background-color: lightblue;
+}
+
+.navButtonList {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	background-color: lightblue;
+}
+
+.navButtonList li:hover {
+	background-color: #555;
+}
+
+.navBtn:hover {
+	background-color: #555;
+}
+
+.navBtn:hover .dropDown{
+	display: block;
+}
+
+.navBtn{
+	display: inline-block;
+	flex: 0 0 auto;
+}
