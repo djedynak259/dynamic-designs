@@ -8,8 +8,7 @@ a {
 	padding: 10px;
 	text-decoration: none;
 	font-size: 20px;
-	display: inline-block;
-	color: black;
+	cursor: pointer;
 	/*make a link not follow*/
 }
 
@@ -40,19 +39,20 @@ p {
 	background: url(../img/bg1.jpg) no-repeat top -80px center / 100%;
 	position: relative;
 	height: 800px;
-	z-index: -1;
 }
 
 .dropDown {
 	position: absolute;
+	top: 67px;
 	visibility: hidden;
+	box-shadow: 1px 1px 2px 0px grey;
 	padding: 0;
-	 opacity: 0;
+	opacity: 0;
 	width: 100px;
 	background-color: white;
-	transform: translateY(-2em);
+	transform: translateY(-20px);
   z-index: -2;
-  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  transition: all .3s ease-in-out 0s;
 }
 
 .introFooter {
@@ -68,6 +68,7 @@ p {
 
 .introFooterForm input {
 	line-height: 20px;
+	position: relative;
 }
 
 .navBar{
@@ -85,8 +86,6 @@ p {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-	animation-duration: 0s;
-	animation-fill-mode: forwards;
 }
 
 .navLogoWrap img{
@@ -94,39 +93,29 @@ p {
 	margin: 0 60px 0 0;
 }
 
-.navButtonList li:hover {
-	background-color: #555;
-}
-
 .navBtn{
 	position: relative;
 	z-index: 1;
-	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+	transition: all 0.3s ease-in-out 0s, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
 	display: inline-block;
 	flex: 0 0 auto;
 	background-color: white;
 }
 
+.navBtn a {
+	padding-bottom: 50px;
+	padding-top: 40px;
+}
+
 .navBtn:hover {
-	background-color: #555;
-	 transform: translateY(0%);
+	color: #a5a4a3;
+	transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
 }
 
 .navBtn:hover .dropDown{
 	opacity: 1;
-  z-index: -11;
 	visibility: visible;
-	 transform: translateY(0%);
+	transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
-}
-
-@keyframes navFlexLeft {
-    from {justify-content: flex-end;}
-    to {justify-content: flex-start;}
-}
-
-@keyframes navFlexRight {
-    from {justify-content: flex-start;}
-    to {justify-content: flex-end;}
 }
