@@ -25,12 +25,58 @@ li {
 	display: block;
 }
 
+nav {
+	background-color: white;
+}
+
+p {
+	font-family: 'Encode Sans', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	margin: 10px;
+}
+
+.background	{
+	background: url(../img/bg1.jpg) no-repeat top -80px center / 100%;
+	position: relative;
+	height: 800px;
+	z-index: -1;
+}
+
 .dropDown {
 	position: absolute;
-	display: none;
+	visibility: hidden;
 	padding: 0;
+	 opacity: 0;
 	width: 100px;
-	background-color: lightblue;
+	background-color: white;
+	transform: translateY(-2em);
+  z-index: -2;
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.introFooter {
+	position: absolute;
+	background: rgba(24,142,86,0.74);
+	height: 70px;
+	width: 100%;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.introFooterForm input {
+	line-height: 20px;
+}
+
+.navBar{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width:1165px;
+	margin: 0 auto;
 }
 
 .navButtonList {
@@ -39,9 +85,40 @@ li {
 	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-	background-color: lightblue;
 	animation-duration: 0s;
 	animation-fill-mode: forwards;
+}
+
+.navLogoWrap img{
+	height: 70px;
+	margin: 0 60px 0 0;
+}
+
+.navButtonList li:hover {
+	background-color: #555;
+}
+
+.navBtn{
+	position: relative;
+	z-index: 1;
+	transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+	display: inline-block;
+	flex: 0 0 auto;
+	background-color: white;
+}
+
+.navBtn:hover {
+	background-color: #555;
+	 transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
+}
+
+.navBtn:hover .dropDown{
+	opacity: 1;
+  z-index: -11;
+	visibility: visible;
+	 transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s;
 }
 
 @keyframes navFlexLeft {
@@ -52,21 +129,4 @@ li {
 @keyframes navFlexRight {
     from {justify-content: flex-start;}
     to {justify-content: flex-end;}
-}
-
-.navButtonList li:hover {
-	background-color: #555;
-}
-
-.navBtn:hover {
-	background-color: #555;
-}
-
-.navBtn:hover .dropDown{
-	display: block;
-}
-
-.navBtn{
-	display: inline-block;
-	flex: 0 0 auto;
 }
