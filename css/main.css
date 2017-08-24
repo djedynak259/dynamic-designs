@@ -45,8 +45,17 @@ p {
 	height: 900px;
 }
 
-.contentImg {
+.content {
+	display: flex;
+}
 
+.content img{
+	height: 600px;
+}
+
+.contentTextWrap {
+	position: relative;
+	width: 100%;
 }
 
 .contentWrap {
@@ -54,6 +63,11 @@ p {
 	max-width:1165px;
 	margin: 0 auto;
 }
+
+.contentWrap h1 {
+	text-align: center;
+	margin: 40px 0;
+}	
 
 .dropDown {
 	position: absolute;
