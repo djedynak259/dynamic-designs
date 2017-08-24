@@ -98,7 +98,7 @@ p {
 	margin: 0 60px 0 0;
 }
 
-.navLogoWrap:hover .logoEffectWrap{
+.navLogoWrap:hover .logoEffect{
 	transition: all 2s ease;
 	left:200px;
 	visibility: visible;
@@ -113,32 +113,13 @@ p {
 	left: 0;
 }
 
-.logoEffectWrap {
-	visibility: visible;
+.logoEffect {
 	pointer-events: none;
-	display: flex;
+	background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 48%, white 50%, rgba(255,255,255,1) 52%,rgba(255,255,255,0) 100%);
 	position: absolute;
 	left: -200px;	
-	top: 0;
 	height: inherit;
-}
-
-.logoEffectRight{
-	background: linear-gradient(90deg, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-	height: auto;
-	width: 100px;
-}
-
-.logoEffectMid{
-	background: white;
-	width: 10px;
-	height: auto;
-}
-
-.logoEffectLeft{
-	background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-	height: auto;
-	width: 100px;
+	width: 210px;
 }
 
 .navBtn{
@@ -156,16 +137,9 @@ p {
 	padding-top: 40px;
 }
 
-.navBtn:hover {
-	/*color: #a5a4a3;*/
-	transform: translateY(0%);
-  transition-delay: 0s, 0s, 0.3s;
-}
-
-.navBtn:hover .logoEffectWrap{
+.navBtn:hover .logoEffect{
 	transition: all 2s ease;
 	left:200px;
-	visibility: visible;
 }
 
 .navBtn:hover .dropDown{
