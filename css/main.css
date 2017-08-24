@@ -7,7 +7,7 @@ body{
 a {
 	padding: 10px 16px 10px 10px;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: 22px;
 	cursor: pointer;
 	/*make a link not follow*/
 }
@@ -46,13 +46,12 @@ p {
 	position: absolute;
 	top: 67px;
 	visibility: hidden;
-	box-shadow: 1px 1px 2px 0px grey;
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
 	padding: 0;
 	opacity: 0;
 	width: 100px;
 	background-color: white;
 	transform: translateY(-20px);
-  z-index: -2;
   transition: all .3s ease-in-out 0s;
 }
 
@@ -83,14 +82,8 @@ p {
 
 .navButtonList {
 	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
-}
-
-.navLogoWrap {
-	position: static;
 }
 
 .navLogoWrap img{
@@ -101,7 +94,6 @@ p {
 .navLogoWrap:hover .logoEffect{
 	transition: all 2s ease;
 	left:200px;
-	visibility: visible;
 }
 
 .logoOverflowCheck {
@@ -125,10 +117,8 @@ p {
 
 .navBtn{
 	position: relative;
-	overflow-y: visible; 
 	z-index: 1;
 	transition: all 0.3s ease-in-out 0s, visibility 0.3s linear 0.3s, z-index 0s linear 0.01s;
-	display: inline-block;
 	flex: 0 0 auto;
 	background-color: white;
 }
