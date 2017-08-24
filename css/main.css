@@ -25,6 +25,9 @@ li {
 }
 
 nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
 	background-color: white;
 }
 
@@ -40,6 +43,16 @@ p {
 	background-size: cover;
 	position: relative;
 	height: 900px;
+}
+
+.contentImg {
+
+}
+
+.contentWrap {
+	position: relative;
+	max-width:1165px;
+	margin: 0 auto;
 }
 
 .dropDown {
@@ -69,6 +82,11 @@ p {
 .introFooterForm input {
 	line-height: 20px;
 	position: relative;
+}
+
+.mainWrapper {
+	position: relative;
+	top: 74px;
 }
 
 .navBar{
@@ -139,4 +157,14 @@ p {
 	visibility: visible;
 	transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s;
+}
+
+.stripes {
+	position: absolute;
+	width: 100%;
+	background: linear-gradient(to bottom, white 20%, rgb(242, 242, 242) 50%, white);
+	height: 900px;
+	transform: skewY(-6deg);
+  transform-origin: 0;
+
 }
