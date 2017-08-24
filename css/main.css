@@ -89,6 +89,10 @@ p {
 	padding: 0;
 }
 
+.navLogoWrap {
+	position: static;
+}
+
 .navLogoWrap img{
 	height: 70px;
 	margin: 0 60px 0 0;
