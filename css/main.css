@@ -107,6 +107,7 @@ p {
 .logoOverflowCheck {
 	overflow-x:hidden;
 	position: absolute;
+	cursor: pointer;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -119,7 +120,7 @@ p {
 	position: absolute;
 	left: -200px;	
 	height: inherit;
-	width: 210px;
+	width: 200px;
 }
 
 .navBtn{
