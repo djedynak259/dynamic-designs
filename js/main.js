@@ -22,16 +22,44 @@ document.getElementById('form').elements.name.addEventListener('blur',function(e
 	let el = document.getElementById('name');
 	let msg = document.getElementById('errorMsg');
 	console.log(el.value.length)
-	if(el.value.length < 5){
+	if(el.value.length < 5 && el.value.length){
 		let errorEl = document.createElement('p')
-		let error = document.createTextNode('must use more characters');
+		errorEl.className='nameError';
+		let error = document.createTextNode('Name must have more characters');
 		errorEl.appendChild(error);
 		msg.appendChild(errorEl);
 	}
 	else {
-		while (msg.hasChildNodes()) {
-    msg.removeChild(msg.lastChild);
-}
+		while (document.getElementsByClassName('nameError')[0]) {
+	    msg.removeChild(document.getElementsByClassName('nameError')[0]);
+		}
+	}
+})
+
+document.getElementById('form').elements.email.addEventListener('blur',function(){
+	let el = document.getElementById('form').elements.email.value;
+	let msg = document.getElementById('errorMsg');
+	let at = 0;
+	let period = 0;
+	for(let i=0;i<el.length;i++){
+		if(el[i] === '@'){
+			at++
+		}
+		if(el[i] === '.'){
+			period++
+		}
+	}
+	if(el.length && (at !== 1 || period !== 1)){
+		let errorEl = document.createElement('p')
+		errorEl.className = 'emailError';		
+		let error = document.createTextNode('Must be valid email');
+		errorEl.appendChild(error);
+		msg.appendChild(errorEl);
+	}
+	else{
+		while (document.getElementsByClassName('emailError')[0]) {
+	    msg.removeChild(document.getElementsByClassName('emailError')[0]);
+		}	
 	}
 })
 
