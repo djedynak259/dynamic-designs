@@ -1,3 +1,17 @@
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("allWrap").style.display = "block";
+}
+
+
+
+
 document.getElementById('navAlignLeft').addEventListener('click', function(){
 	let el = document.getElementsByClassName('navButtonList')[0];
 	el.style.animationName= 'navFlexLeft';
