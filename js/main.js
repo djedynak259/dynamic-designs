@@ -15,7 +15,9 @@ document.getElementsByClassName('navBtn')[2].addEventListener('click',function()
 
 document.getElementById('form').addEventListener('submit', function(e){
 	e.preventDefault();
-	console.log(document.getElementById('form').elements.email.value)
+	let el = document.getElementById('errorMsg')
+
+	console.log(document.getElementById('form').elements)
 })
 
 document.getElementById('form').elements.name.addEventListener('blur',function(e){
@@ -63,10 +65,40 @@ document.getElementById('form').elements.email.addEventListener('blur',function(
 	}
 })
 
-// document.getElementById('form').elements.name.addEventListener('focus',function(e){
-// 	let msg = document.getElementById('errorMsg');
-// 	let errorEl = document.createElement('p')
-// 	let error = document.createTextNode('must use more characters');
-// 	errorEl.appendChild(error);
-// 	msg.appendChild(errorEl);
-// })
+
+function get(url){
+	url = 'http://fortunecookieapi.com/v1/fortunes/1'
+	return new Promise(function(succeed,fail){
+		var xhr = new XMLHttpRequest();
+		xhr.open('open',url,true);
+		xhr.addEventListener('load',function(){
+			if(xhr.status < 400){
+				succeed(xhr.responseText)
+			} else fail(new Error('reQuest failed ' + xhr.statusText))
+		})
+		xhr.addEventListener('fail', function(){
+			fail(new Error('Network error'))
+		})
+		xhr.send(null)
+	})
+}
+
+function gett(){
+	get().then(function(text) {
+	  console.log("data.txt: " + text);
+	}, function(error) {
+	  console.log("Failed to fetch data.txt: " + error);
+	});
+}
+
+
+!function(){
+
+	var xhr = new XMLHttpRequest();
+	xhr.open('get',`http://fortunecookieapi.com/v1/fortunes/1`, false);
+	xhr.addEventListener('load',function(){
+			console.log(JSON.parse(xhr.response), xhr.status)
+	})
+	xhr.send(null);
+
+}();
