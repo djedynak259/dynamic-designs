@@ -66,39 +66,39 @@ document.getElementById('form').elements.email.addEventListener('blur',function(
 })
 
 
-function get(url){
-	url = 'http://fortunecookieapi.com/v1/fortunes/1'
-	return new Promise(function(succeed,fail){
-		var xhr = new XMLHttpRequest();
-		xhr.open('open',url,true);
-		xhr.addEventListener('load',function(){
-			if(xhr.status < 400){
-				succeed(xhr.responseText)
-			} else fail(new Error('reQuest failed ' + xhr.statusText))
-		})
-		xhr.addEventListener('fail', function(){
-			fail(new Error('Network error'))
-		})
-		xhr.send(null)
-	})
-}
-
-function gett(){
-	get().then(function(text) {
-	  console.log("data.txt: " + text);
-	}, function(error) {
-	  console.log("Failed to fetch data.txt: " + error);
-	});
-}
-
 
 !function(){
 
-	var xhr = new XMLHttpRequest();
-	xhr.open('get',`http://fortunecookieapi.com/v1/fortunes/1`, false);
-	xhr.addEventListener('load',function(){
-			console.log(JSON.parse(xhr.response), xhr.status)
-	})
-	xhr.send(null);
+	function get(url){
+		return new Promise(function(succeed,fail){
+			var xhr = new XMLHttpRequest();
+			xhr.open('get',url,true);
+			xhr.addEventListener('load',function(){
+				if(xhr.status < 400){
+					succeed(xhr.responseText)
+				} else fail(new Error('reQuest failed ' + xhr.statusText))
+			})
+			xhr.addEventListener('fail', function(){
+				fail(new Error('Network error'))
+			})
+			xhr.send(null)
+		})
+	}
+
+	let url = 'http://api.giphy.com/v1/gifs/search?q=ryan&api_key=a5c163ee9c29473580e365c6cc226a99&limit=6';
+
+	get(url).then(function(text) {
+		  console.log(JSON.parse(text));
+		}, function(error) {
+		  console.log("Failed to fetch data.txt: " + error);
+		})
+
+
+	// var xhr = new XMLHttpRequest();
+	// xhr.open('get',`http://api.giphy.com/v1/gifs/search?q=ryan&api_key=a5c163ee9c29473580e365c6cc226a99&limit=6`, false);
+	// xhr.addEventListener('load',function(){
+	// 		console.log(JSON.parse(xhr.response), xhr.status)
+	// })
+	// xhr.send(null);
 
 }();
