@@ -80,8 +80,8 @@
 
 	<div class="contact">
 		<h2>Contact</h2>
-		<form id='form'>
-			Name: <input id='name' type="text" name="name">
+		<form id='form' onsubmit='return validate()'>
+			Name: <input id='name' type="text" name="name" required>
 			Email: <input type="email" name="email">
 			Age: <input type="number" name="age">
 			<input type="submit" name="submit">

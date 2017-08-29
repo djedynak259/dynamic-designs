@@ -81,6 +81,12 @@ document.getElementById('form').elements.email.addEventListener('blur',function(
 
 
 
+function validate(){
+	console.log('test')
+
+}
+
+
 !function(){
 
 	function get(url){
