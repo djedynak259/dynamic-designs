@@ -1,5 +1,5 @@
 function load() {
-    let myVar = setTimeout(showPage, 2000);
+    let myVar = setTimeout(showPage, 0050);
 }
 
 function showPage() {
