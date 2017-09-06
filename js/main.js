@@ -109,7 +109,7 @@ function validate(){
 		  console.log(JSON.parse(text));
 		}, function(error) {
 		  console.log("Failed to fetch data.txt: " + error);
-		})
+	})
 
 
 	// var xhr = new XMLHttpRequest();
