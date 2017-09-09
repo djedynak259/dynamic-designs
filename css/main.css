@@ -83,19 +83,6 @@ form {
 	text-align: center;
 }
 
-.content {
-	display: flex;
-}
-
-.content img{
-	height: 600px;
-}
-
-.contentTextWrap {
-	position: relative;
-	width: 100%;
-}
-
 .contentWrap {
 	position: relative;
 	max-width:1165px;
