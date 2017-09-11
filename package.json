@@ -1,0 +1,27 @@
+{
+  "name": "styleproject",
+  "version": "1.0.0",
+  "description": "updated profile",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djedynak259/dynamic-designs.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Dan Jedynak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djedynak259/dynamic-designs/issues"
+  },
+  "homepage": "https://github.com/djedynak259/dynamic-designs#readme"
+}
