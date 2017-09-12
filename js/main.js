@@ -1,3 +1,5 @@
+// Loader
+
 function load() {
     let myVar = setTimeout(showPage, 0050);
 }
@@ -8,24 +10,26 @@ function showPage() {
 }
 
 
+// Nav jump
 
 
-document.getElementById('navAlignLeft').addEventListener('click', function(){
-	let el = document.getElementsByClassName('navButtonList')[0];
-	el.style.animationName= 'navFlexLeft';
-})
+// document.getElementById('navAlignLeft').addEventListener('click', function(){
+// 	let el = document.getElementsByClassName('navButtonList')[0];
+// 	el.style.animationName= 'navFlexLeft';
+// })
 
-document.getElementById('navAlignRight').addEventListener('click', function(){
-	let el = document.getElementsByClassName('navButtonList')[0];
-	el.style.animationName= 'navFlexRight';
-})
+// document.getElementById('navAlignRight').addEventListener('click', function(){
+// 	let el = document.getElementsByClassName('navButtonList')[0];
+// 	el.style.animationName= 'navFlexRight';
+// })
 
-document.getElementsByClassName('navBtn')[2].addEventListener('click',function(){
+document.getElementsByClassName('navBtn')[0].addEventListener('click',function(){
 	let el = document.getElementsByClassName('contentWrap')[0];
 	el.scrollIntoView(true);
 })
 
-// Modal functions 
+
+// Modal  
 
 // Get the modal
 var modal = document.getElementById('myModal');
@@ -34,7 +38,7 @@ var modal = document.getElementById('myModal');
 var btn = document.getElementById("myModal1");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("modal-close")[0];
 
 // When the user clicks the button, open the modal 
 btn.onclick = function() {
@@ -52,8 +56,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+// Modal  End
 
-// Modal function End
+// Form 
 
 document.getElementById('form').addEventListener('submit', function(e){
 	e.preventDefault();
