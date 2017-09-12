@@ -26,7 +26,9 @@ p {
 
 h1 {
 	font-weight: 500;
-	font-size: 2em;
+	font-size: 2.5em;
+	text-align: center;
+	margin: 60px 0 50px 0;
 }
 
 h2 {
@@ -76,7 +78,7 @@ nav {
 }
 
 form {
-	padding: 20px;
+	padding-bottom: 20px;
 	display: inline-block;
 }
 
@@ -99,11 +101,6 @@ form {
 	max-width:1165px;
 	margin: 0 auto;
 }
-
-.contentWrap h1 {
-	text-align: center;
-	margin: 40px 0;
-}	
 
 .dropDown {
 	position: absolute;
