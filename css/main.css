@@ -8,9 +8,8 @@ body{
 }
 
 a {
-	padding: 10px 16px 10px 10px;
 	text-decoration: none;
-	font-size: 22px;
+	font-size: 18px;
 	cursor: pointer;
 /*	font-family: 'Encode Sans', sans-serif;
 	font-weight: 500;*/
@@ -64,6 +63,11 @@ input, textarea {
 	display: block;
 	border: 1px solid #D1D1D1;
 	border-radius: 4px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 li {
@@ -218,6 +222,10 @@ form {
 	margin: 0 auto;
 }
 
+.navBar a {
+	padding: 10px 16px 10px 10px;
+}
+
 .navButtonList {
 	display: flex;
 	margin: 0;
@@ -339,6 +347,27 @@ form {
 	padding-left: 20px;
 }
 
+#social {
+
+}
+
+#social ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	background-color: #191919;
+}
+
+#social li {
+	padding: 15px;
+}
+
+#social a {
+	font-size: 30px;
+	color: #fff;
+}
+
 .stripes {
 	position: absolute;
 	width: 100%;
@@ -346,7 +375,6 @@ form {
 	height: 900px;
 	transform: skewY(-6deg);
   transform-origin: 0;
-
 }
 
 /*experiemtal loader code*/
